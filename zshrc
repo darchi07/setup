@@ -31,3 +31,6 @@ eval "$(rbenv init -)"
 
 #beep音を消す
 setopt no_beep
+
+#AAAA
+
