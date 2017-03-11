@@ -32,5 +32,11 @@ eval "$(rbenv init -)"
 #beep音を消す
 setopt no_beep
 
-#AAAA
+#lsのalias
+alias ls="ls -G"
+alias l="ls -al"
+alias la="ls -a"
+
+#emacs 
+alias emacs="emacs -nw "
 
