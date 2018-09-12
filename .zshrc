@@ -7,6 +7,9 @@ setopt no_beep
 #日本語ファイル名を表示可能にする
 setopt print_eight_bit
 
+#日本語を使用
+export LANG=ja_JP.UTF-8
+
 #cdコマンド実行後lsを実行
 function cd (){
 builtin cd $@ && ls;
@@ -29,14 +32,25 @@ RPROMPT="[%{$fg[green]%}%D %*%{$reset_color%}]"
 export PATH="HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
-#beep音を消す
-setopt no_beep
+export PATH="$HOME/.rbenv/shims:$PATH"
 
-#lsのalias
-alias ls="ls -G"
-alias l="ls -al"
+#JAVA文字化けのをなくすためにutf-8
+#alias javac='javac -J-Dfile.encoding=UTF-8'
+#alias java='java -Dfile.encoding=UTF-8'
+
+
+#ls
+alias ls="ls -G" # color for darwin
+alias l="ls -la"
 alias la="ls -a"
+alias l1="ls -1"
 
 #emacs 
-alias emacs="emacs -nw "
+alias emacs="emacs -nw"
+
+#emacs キーバインド
+bindkey -e
+#補完
+autoload -Uz compinit
+compinit
 
