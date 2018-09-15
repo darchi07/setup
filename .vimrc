@@ -11,7 +11,8 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
-
+"保管メニュー
+set pumheight=5
 
 " 見た目系
 " 行番号を表示
@@ -37,7 +38,8 @@ nnoremap j gj
 nnoremap k gk
 "シンタックスハイライト
 syntax on
-
+"タイトルを表示
+set title
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
