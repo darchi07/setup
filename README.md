@@ -3,3 +3,4 @@
 - .zshrc
 - .vimrc
 - .gvimrc
+- .irbrc
